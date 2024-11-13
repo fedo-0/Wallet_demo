@@ -47,6 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: optionButton,
+            icon: const Icon(Icons.person),
+            iconSize: 30,
+          ),
+        ],
         title: Text(widget.title),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
@@ -73,5 +80,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor:  Theme.of(context).colorScheme.inversePrimary,
       ),
     );
+  }
+
+  void optionButton() {
   }
 }
